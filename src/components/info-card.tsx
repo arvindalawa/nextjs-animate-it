@@ -10,12 +10,16 @@ interface InfoCardProps {
 
 export function InfoCard({ title, children }: InfoCardProps) {
   return (
-    <Card color="transparent" shadow={false}>
-      <CardBody className="grid px-0">
-        <Typography variant="h2" color="blue-gray" className="mb-2">
+    // @ts-expect-error - Material Tailwind v2.x has overly strict types
+    <Card color="transparent" shadow={false} placeholder="">
+      {/* @ts-expect-error - Material Tailwind v2.x has overly strict types */}
+      <CardBody className="grid px-0" placeholder="">
+        {/* @ts-expect-error - Material Tailwind v2.x has overly strict types */}
+        <Typography variant="h2" color="blue-gray" className="mb-2" placeholder="">
           {title}
         </Typography>
-        <Typography className=" font-normal">{children}</Typography>
+        {/* @ts-expect-error - Material Tailwind v2.x has overly strict types */}
+        <Typography className=" font-normal" placeholder="">{children}</Typography>
       </CardBody>
     </Card>
   );

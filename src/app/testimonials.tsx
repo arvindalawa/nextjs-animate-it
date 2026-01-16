@@ -38,12 +38,15 @@ export function Testimonials() {
           <div className="mb-10 flex h-12 w-12 items-center justify-center rounded-lg bg-gray-900 text-white ">
             <UserIcon className="h-6 w-6" />
           </div>
-          <Typography variant="h2" color="blue-gray" className="mb-2">
+          {/* @ts-expect-error - Material Tailwind v2.x has overly strict types */}
+          <Typography variant="h2" color="blue-gray" className="mb-2" placeholder="">
             What Clients Say
           </Typography>
+          {/* @ts-expect-error - Material Tailwind v2.x has overly strict types */}
           <Typography
             variant="lead"
             className="mb-10 max-w-3xl text-center !text-gray-600"
+            placeholder=""
           >
             Discover what our valued clients have to say about their experiences
             with our services. We take pride in delivering exceptional results

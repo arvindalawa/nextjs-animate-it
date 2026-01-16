@@ -33,8 +33,8 @@ export function Faqs() {
         </div>
 
         <div className="grid gap-20 lg:grid-cols-3">
-          {FAQS.map(({ title, desc }) => (
-            <div className="rounded-lg bg-transparent shadow-none">
+          {FAQS.map(({ title, desc },index) => (
+            <div key={index} className="rounded-lg bg-transparent shadow-none">
               <h4 className="pb-6 text-xl font-semibold text-blue-gray-900">
                 {title}
               </h4>
